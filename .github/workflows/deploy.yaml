@@ -1,0 +1,20 @@
+name: Deployment
+
+on: push
+
+jobs:
+  deploy:
+    name: Deploy site
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: 'Setup git username'
+        run: git config --global url."https://vkuzenkov:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
+      - name: 'Install node_modules'
+        run: npm ci
+      - name: 'Run deployment'
+        run: npm run deploy

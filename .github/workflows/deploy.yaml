@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
       - name: 'Setup git username'
-        run: git config --global url."https://vkuzenkov:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/"
+        run: git config --global url."https://vkuzenkov:${{ secrets.GITHUB_TOKEN }}@github.com/".insteadOf "https://github.com/" && git config --global user.email "kyzenkov@gmail.com" && git config --global user.name "Viktor Kuzenkov"
       - name: 'Install node_modules'
         run: npm ci
       - name: 'Run deployment'

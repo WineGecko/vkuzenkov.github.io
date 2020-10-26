@@ -17,7 +17,7 @@ const AboutMe = () => {
     return (
         <Page
             className={classes.root}
-            title="Dashboard"
+            title="About me"
         >
             <Container maxWidth={false}>
                 <p>About me section</p>

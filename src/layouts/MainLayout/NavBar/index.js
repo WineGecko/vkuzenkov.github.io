@@ -32,11 +32,6 @@ const items = [
     title: 'About me'
   },
   {
-    href: '/site',
-    icon: LanguageIcon,
-    title: 'About this site'
-  },
-  {
     href: '/education',
     icon: AccountBalanceIcon,
     title: 'Education'
@@ -50,6 +45,11 @@ const items = [
     href: '/skills',
     icon: AllInclusiveIcon,
     title: 'Skills'
+  },
+  {
+    href: '/site',
+    icon: LanguageIcon,
+    title: 'About this site'
   }
 ];
 

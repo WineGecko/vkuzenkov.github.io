@@ -1,15 +1,17 @@
-import './App.css';
-import Navigation from './Components/Navigation';
-import Contacts from './Components/Contacts';
-import { Container, Grid } from '@material-ui/core';
-import StickyFooter from './Components/StickyFooter';
+import { ThemeProvider } from '@material-ui/core';
+import React from 'react';
+import routes from './routes';
+import GlobalStyles from './components/GlobalStyles';
+import MainLayout from './layouts/MainLayout';
 
-function App() {
+export default function App() {
+
   return (
-    <div className="App">
-<Navigation></Navigation>
-    </div>
+    <ThemeProvider>
+      <GlobalStyles />
+      <MainLayout>
+        {routes}
+      </MainLayout>
+    </ThemeProvider>
   );
 }
-
-export default App;
